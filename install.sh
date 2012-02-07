@@ -32,7 +32,7 @@ else
     read continue
 fi
 
-if [[ $continue == "Y" || $continue == "y" ]]; then
+if [ $continue == "Y" || $continue == "y" ]; then
         echo "- Continuing..."
         echo ""
 else
@@ -45,9 +45,9 @@ then
     echo "-  /etc/munin/munin-mobile.conf       - file exists! (not copied)"
 else
     echo "- ./munin-mobile.conf -> /etc/munin/munin-mobile.conf"
-    cp `pwd`/munin-mobile.conf /etc/munin/munin-mobile.conf    
+    cp `pwd`/munin-mobile.conf /etc/munin/munin-mobile.conf
     chown /etc/munin/munin-mobile.conf --reference=/etc/munin/munin.conf
-fi    
+fi
 
 echo "- ./templates-mobiles                 -> /etc/munin/templates-mobiles"
 
@@ -78,4 +78,3 @@ chmod 755 /etc/munin/update.sh
 
 echo ""
 echo "Finished!"
-
