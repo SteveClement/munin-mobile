@@ -1,5 +1,3 @@
-
-
 $('div').live('pagecreate',function(){
 
     $('#quickjump span').click(function() {
@@ -8,10 +6,10 @@ $('div').live('pagecreate',function(){
 });
 
 function doJump(whereTo) {
-    
+
            if($('#'+whereTo).length > 0) {
                pos = $('#'+whereTo).position();
-               setTimeout("toppx = $('#" + whereTo  + "').position()['top']; $('body').scrollTop(toppx)",100) 
+               setTimeout("toppx = $('#" + whereTo  + "').position()['top']; $('body').scrollTop(toppx)",100)
            }
 }
 
