@@ -10,7 +10,7 @@ echo "And copy the following files:"
 echo " ./munin-mobile.conf   -> /etc/munin/munin-mobile.conf"
 echo " ./templates-mobiles/* -> /etc/munin/templates-mobiles/"
 echo " ./mobile-www/*        -> /var/www/munin/mobile/*"
-echo " ./update-mobile.sh    -> /etc/munin/update-mobile.sh"
+echo " ./update.sh    -> /etc/munin/update.sh"
 echo ""
 echo "It also sets the permissions to the same as your munin files"
 echo ""
@@ -69,12 +69,12 @@ fi
 cp -r `pwd`/mobile-www/* /var/www/munin/mobile
 chown -R /var/www/munin/mobile --reference=/var/www/munin
 
-echo "- ./update-mobile.sh                 -> /etc/munin/update-mobile.sh"
+echo "- ./update.sh                 -> /etc/munin/update.sh"
 
-cp update-mobile.sh /etc/munin/
-chown /etc/munin/update-mobile.sh --reference=/etc/munin/munin-mobile.conf
+cp update.sh /etc/munin/
+chown /etc/munin/update.sh --reference=/etc/munin/munin-mobile.conf
 
-chmod 755 /etc/munin/update-mobile.sh
+chmod 755 /etc/munin/update.sh
 
 echo ""
 echo "Finished!"
